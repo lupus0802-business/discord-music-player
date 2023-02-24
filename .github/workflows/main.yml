@@ -4,6 +4,7 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       # You may pin to the exact commit or the version.
       # uses: alexthemaster/action-build-typescript@d0935101a24426420d5bd5692a4cf16631cd6605
       - uses: alexthemaster/action-build-typescript@v1.3.1
