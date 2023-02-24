@@ -10,7 +10,9 @@
     "strict": false,
     "esModuleInterop": true,
     "pretty": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmit": false,
+    "noEmitOnError": false
   },
   "include": [
     "src/**/*"
