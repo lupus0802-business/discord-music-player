@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "tsc || (exit 0)",
-    "postprepare": "rm -rf src tsconfig.json",
+    "postprepare": "npm install rimraf && rimraf src tsconfig.json && npm remove rimraf",
     "build": "tsc --build tsconfig.json",
     "test": "jest test/test.js",
     "docs:test": "docgen --jsdoc jsdoc.json --source src/*.ts src/**/*.ts --custom docs/custom.yml",
