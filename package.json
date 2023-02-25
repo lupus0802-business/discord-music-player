@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "preinstall": "(tsc --noEmitOnError || (exit 0)) && rm -rf src tsconfig.json",
+    "postinstall": "(tsc --noEmitOnError || (exit 0)) && rm -rf src tsconfig.json",
     "build": "tsc --build tsconfig.json",
     "test": "jest test/test.js",
     "docs:test": "docgen --jsdoc jsdoc.json --source src/*.ts src/**/*.ts --custom docs/custom.yml",
