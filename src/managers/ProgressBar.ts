@@ -61,6 +61,10 @@ class ProgressBar {
      * @private
      */
     private create() {
+        if (this.queue.nowPlaying.isLive || !this.queue.nowPlaying.duration) {
+            this.bar = '🔴 LIVE';
+            return;
+        }
         const { size, arrow, block } = this.options;
         const currentTime = this.queue.nowPlaying!.seekTime + this.queue.connection!.time;
         const progress = Math.round((size! * currentTime / this.queue.nowPlaying!.milliseconds));
@@ -85,7 +89,7 @@ class ProgressBar {
      * @returns {string}
      */
     toString(): string {
-        return this.options.time ? this.prettier : `[${this.bar}]`;
+        return this.options.time && this.times ? this.prettier : `[${this.bar}]`;
     }
 }
 
