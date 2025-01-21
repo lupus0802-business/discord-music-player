@@ -37,7 +37,7 @@
     "@discordjs/opus": "^0.8.0",
     "@discordjs/voice": "^0.14.0",
     "apple-music-metadata": "^1.0.10",
-    "axios": "^0.22.0",
+    "axios": "^0.28.0",
     "axios-retry": "^3.5.1",
     "discord-ytdl-core": "^5.0.4",
     "domhandler": "^4.3.1",
